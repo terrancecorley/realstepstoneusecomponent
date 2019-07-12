@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import Alert from '@bit/terrance_corley.realstepstonedemo.alert';
-// import Button from '@bit/terrance_corley.realstepstonedemo.button';
+import Alert from '@bit/terrance_corley.realstepstonedemo.alert';
+import Button from '@bit/terrance_corley.realstepstonedemo.button';
 import styled from 'styled-components';
 import './app.css';
 
@@ -27,7 +27,7 @@ class App extends Component {
         return (
             <>
                 <div className="App">
-                    {/* <AlertBtn onClick={this.showAlert}>Show alert</AlertBtn>
+                    <AlertBtn onClick={this.showAlert}>Show alert</AlertBtn>
                     {shouldDisplayAlert && 
                         <Alert
                             title="Alert Title"
@@ -36,7 +36,7 @@ class App extends Component {
                         >
                             This is an alert for StepStone demo purposes.
                         </Alert>
-                    } */}
+                    }
                 </div>
             </>
         );
@@ -45,7 +45,7 @@ class App extends Component {
 
 export default App;
 
-// const AlertBtn = styled(Button)`
-//     margin: 10% auto 0;
-//     display: block;
-// `;
+const AlertBtn = styled(Button)`
+    margin: 10% auto 0;
+    display: block;
+`;
