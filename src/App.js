@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+// import Alert from '@bit/terrance_corley.realstepstonedemo.alert';
+// import Button from '@bit/terrance_corley.realstepstonedemo.button';
+import styled from 'styled-components';
+import './app.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    state = {
+        displayAlert: false
+    }
+
+    showAlert = () => {
+        this.setState({
+            displayAlert: true
+        });
+    }
+
+    hideAlert = () => {
+        this.setState({
+            displayAlert: false
+        });
+    }
+
+    render() {
+        let shouldDisplayAlert = this.state.displayAlert;
+
+        return (
+            <>
+                <div className="App">
+                    {/* <AlertBtn onClick={this.showAlert}>Show alert</AlertBtn>
+                    {shouldDisplayAlert && 
+                        <Alert
+                            title="Alert Title"
+                            onClick={this.hideAlert}
+                            overlayClass="overlay"
+                        >
+                            This is an alert for StepStone demo purposes.
+                        </Alert>
+                    } */}
+                </div>
+            </>
+        );
+    }
 }
 
 export default App;
+
+// const AlertBtn = styled(Button)`
+//     margin: 10% auto 0;
+//     display: block;
+// `;
